@@ -2,3 +2,10 @@
 */*/__pycache__/*
 
 
+.ipynb_checkpoints
+aaai19srl.dev.conll.*
+aaai19srl.train.conll.*
+aaai19srl.test.conll.*
+glove.*
+model
+vocab

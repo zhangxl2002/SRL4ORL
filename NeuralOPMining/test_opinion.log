@@ -1,0 +1,168 @@
+GPU available:  False
+CuDNN: 
+ True
+Loaded config file sucessfully.
+pretrained_embeddings_file expdata/glove.6B.100d.txt
+data_dir expdata/opinion
+train_file expdata/opinion/aaai19srl.train.conll
+dev_file expdata/opinion/aaai19srl.dev.conll
+test_file expdata/opinion/aaai19srl.test.conll
+min_occur_count 0
+save_dir expdata/opmodel
+config_file expdata/opmodel/config.cfg
+save_model_path expdata/opmodel/model
+save_vocab_path expdata/opmodel/vocab
+load_dir expdata/opmodel
+load_model_path expdata/opmodel/model
+load_vocab_path expdata/opmodel/vocab
+model BiLSTMCRFModel
+lstm_layers 3
+word_dims 100
+predict_dims 100
+dropout_emb 0.0
+lstm_hiddens 200
+dropout_lstm_input 0.33
+dropout_lstm_hidden 0.33
+hidden_dims 100
+inner_hidden_dims 400
+number_heads 8
+num_layers 6
+dropout_hidden 0.33
+learning_rate 2e-3
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 1.0
+parser_tune 1
+train_iters 50000
+train_batch_size 32
+test_batch_size 32
+validate_every 500
+update_every 4
+save_after 5
+Total num:  3549
+Vocab info: #words 8242, #labels 10
+Total words: 400000
+
+The dim of pretrained embeddings: 100
+
+Loaded config file sucessfully.
+pretrained_embeddings_file expdata/glove.6B.100d.txt
+data_dir expdata/opinion
+train_file expdata/opinion/aaai19srl.train.conll
+dev_file expdata/opinion/aaai19srl.dev.conll
+test_file expdata/opinion/aaai19srl.test.conll
+min_occur_count 0
+save_dir expdata/opmodel
+config_file expdata/opmodel/config.cfg
+save_model_path expdata/opmodel/model
+save_vocab_path expdata/opmodel/vocab
+load_dir expdata/opmodel
+load_model_path expdata/opmodel/model
+load_vocab_path expdata/opmodel/vocab
+model BiLSTMCRFModel
+lstm_layers 3
+word_dims 100
+predict_dims 100
+dropout_emb 0.0
+lstm_hiddens 200
+dropout_lstm_input 0.33
+dropout_lstm_hidden 0.33
+hidden_dims 100
+inner_hidden_dims 400
+number_heads 8
+num_layers 6
+dropout_hidden 0.33
+learning_rate 2e-3
+decay .75
+decay_steps 5000
+beta_1 .9
+beta_2 .9
+epsilon 1e-12
+clip 1.0
+parser_tune 1
+train_iters 50000
+train_batch_size 32
+test_batch_size 32
+validate_every 500
+update_every 4
+save_after 5
+
+GPU using status:  False
+/mnt/workspace/SRL4ORL/NeuralOPMining/./driver/Model.py:113: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  nn.init.normal(self.predicate_embed.weight, 0.0, 1.0 / (config.predict_dims ** 0.5))
+200 400
+Orthogonal pretrainer loss: 1.39e-30
+200 600
+Orthogonal pretrainer loss: 8.18e-31
+200 600
+Orthogonal pretrainer loss: 8.14e-31
+/mnt/workspace/SRL4ORL/NeuralOPMining/./driver/Layer.py:354: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  nn.init.constant(self.__getattr__(name), 0)
+/mnt/workspace/SRL4ORL/NeuralOPMining/./driver/Model.py:129: UserWarning: nn.init.normal is now deprecated in favor of nn.init.normal_.
+  nn.init.normal(self.outlayer.weight, 0.0, 1.0 / ((2 * config.lstm_hiddens) ** 0.5))
+/mnt/workspace/SRL4ORL/NeuralOPMining/./driver/CRF.py:58: UserWarning: nn.init.uniform is now deprecated in favor of nn.init.uniform_.
+  nn.init.uniform(self.start_transitions, -0.1, 0.1)
+/mnt/workspace/SRL4ORL/NeuralOPMining/./driver/CRF.py:59: UserWarning: nn.init.uniform is now deprecated in favor of nn.init.uniform_.
+  nn.init.uniform(self.end_transitions, -0.1, 0.1)
+/mnt/workspace/SRL4ORL/NeuralOPMining/./driver/CRF.py:60: UserWarning: nn.init.uniform is now deprecated in favor of nn.init.uniform_.
+  nn.init.uniform(self.transitions, -0.1, 0.1)
+Total num:  3549
+Total num:  893
+Total num:  1509
+Iteration: 0
+Step 0, Epoch 0, 0/111| acc: 10.61| ppl: 10.35| 1578.1 tgt tok/s| 0.70 s elapsed
+Step 0, Epoch 0, 1/111| acc: 8.56| ppl: 10.38| 1814.9 tgt tok/s| 1.09 s elapsed
+Step 0, Epoch 0, 2/111| acc: 7.82| ppl: 10.39| 1851.0 tgt tok/s| 1.58 s elapsed
+Step 0, Epoch 0, 3/111| acc: 7.30| ppl: 10.38| 1849.1 tgt tok/s| 2.08 s elapsed
+/mnt/workspace/SRL4ORL/NeuralOPMining/driver/Train.py:42: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  nn.utils.clip_grad_norm(filter(lambda p: p.requires_grad, labeler.model.parameters()), \
+Step 1, Epoch 0, 4/111| acc: 21.57| ppl: 9.34| 1754.9 tgt tok/s| 2.70 s elapsed
+Step 1, Epoch 0, 5/111| acc: 30.25| ppl: 8.75| 1674.6 tgt tok/s| 3.32 s elapsed
+Step 1, Epoch 0, 6/111| acc: 37.14| ppl: 8.38| 1714.6 tgt tok/s| 3.75 s elapsed
+Step 1, Epoch 0, 7/111| acc: 42.80| ppl: 8.04| 1618.8 tgt tok/s| 4.58 s elapsed
+Step 2, Epoch 0, 8/111| acc: 45.65| ppl: 7.51| 1624.7 tgt tok/s| 5.10 s elapsed
+Step 2, Epoch 0, 9/111| acc: 49.69| ppl: 6.76| 1564.7 tgt tok/s| 6.01 s elapsed
+Step 2, Epoch 0, 10/111| acc: 52.45| ppl: 6.29| 1602.7 tgt tok/s| 6.39 s elapsed
+Step 2, Epoch 0, 11/111| acc: 54.66| ppl: 5.94| 1629.4 tgt tok/s| 6.83 s elapsed
+Step 3, Epoch 0, 12/111| acc: 56.98| ppl: 5.59| 1638.1 tgt tok/s| 7.46 s elapsed
+Step 3, Epoch 0, 13/111| acc: 58.47| ppl: 5.40| 1642.3 tgt tok/s| 7.99 s elapsed
+Step 3, Epoch 0, 14/111| acc: 59.61| ppl: 5.27| 1661.3 tgt tok/s| 8.51 s elapsed
+Step 3, Epoch 0, 15/111| acc: 60.95| ppl: 5.11| 1670.6 tgt tok/s| 9.04 s elapsed
+Step 4, Epoch 0, 16/111| acc: 62.39| ppl: 4.90| 1685.6 tgt tok/s| 9.54 s elapsed
+Step 4, Epoch 0, 17/111| acc: 63.10| ppl: 4.80| 1662.8 tgt tok/s| 10.17 s elapsed
+Step 4, Epoch 0, 18/111| acc: 64.15| ppl: 4.63| 1623.9 tgt tok/s| 11.09 s elapsed
+Step 4, Epoch 0, 19/111| acc: 64.91| ppl: 4.55| 1625.3 tgt tok/s| 11.70 s elapsed
+Step 5, Epoch 0, 20/111| acc: 65.49| ppl: 4.49| 1623.6 tgt tok/s| 12.28 s elapsed
+Step 5, Epoch 0, 21/111| acc: 66.18| ppl: 4.41| 1625.2 tgt tok/s| 12.82 s elapsed
+Step 5, Epoch 0, 22/111| acc: 66.60| ppl: 4.34| 1584.0 tgt tok/s| 13.83 s elapsed
+Step 5, Epoch 0, 23/111| acc: 66.97| ppl: 4.29| 1543.8 tgt tok/s| 14.76 s elapsed
+Step 6, Epoch 0, 24/111| acc: 67.57| ppl: 4.22| 1537.3 tgt tok/s| 15.41 s elapsed
+Step 6, Epoch 0, 25/111| acc: 67.95| ppl: 4.16| 1508.9 tgt tok/s| 16.34 s elapsed
+Step 6, Epoch 0, 26/111| acc: 68.57| ppl: 4.09| 1502.3 tgt tok/s| 17.08 s elapsed
+Step 6, Epoch 0, 27/111| acc: 68.78| ppl: 4.05| 1485.6 tgt tok/s| 17.81 s elapsed
+Step 7, Epoch 0, 28/111| acc: 69.06| ppl: 4.02| 1484.2 tgt tok/s| 18.41 s elapsed
+Step 7, Epoch 0, 29/111| acc: 69.40| ppl: 3.98| 1473.0 tgt tok/s| 19.16 s elapsed
+Step 7, Epoch 0, 30/111| acc: 69.55| ppl: 3.95| 1467.4 tgt tok/s| 19.82 s elapsed
+Step 7, Epoch 0, 31/111| acc: 69.73| ppl: 3.93| 1448.3 tgt tok/s| 20.68 s elapsed
+Step 8, Epoch 0, 32/111| acc: 69.98| ppl: 3.89| 1428.0 tgt tok/s| 21.64 s elapsed
+Step 8, Epoch 0, 33/111| acc: 70.08| ppl: 3.87| 1430.1 tgt tok/s| 22.21 s elapsed
+Step 8, Epoch 0, 34/111| acc: 70.39| ppl: 3.83| 1427.5 tgt tok/s| 22.93 s elapsed
+Step 8, Epoch 0, 35/111| acc: 70.56| ppl: 3.81| 1429.9 tgt tok/s| 23.41 s elapsed
+Step 9, Epoch 0, 36/111| acc: 70.57| ppl: 3.81| 1423.0 tgt tok/s| 24.20 s elapsed
+Step 9, Epoch 0, 37/111| acc: 70.73| ppl: 3.79| 1420.3 tgt tok/s| 24.84 s elapsed
+Step 9, Epoch 0, 38/111| acc: 70.96| ppl: 3.76| 1420.0 tgt tok/s| 25.49 s elapsed
+Step 9, Epoch 0, 39/111| acc: 71.13| ppl: 3.73| 1423.2 tgt tok/s| 26.08 s elapsed
+Step 10, Epoch 0, 40/111| acc: 71.36| ppl: 3.70| 1416.0 tgt tok/s| 26.93 s elapsed
+Step 10, Epoch 0, 41/111| acc: 71.52| ppl: 3.68| 1408.6 tgt tok/s| 27.76 s elapsed
+Step 10, Epoch 0, 42/111| acc: 71.57| ppl: 3.67| 1406.0 tgt tok/s| 28.39 s elapsed
+Step 10, Epoch 0, 43/111| acc: 71.66| ppl: 3.66| 1404.4 tgt tok/s| 29.02 s elapsed
+Step 11, Epoch 0, 44/111| acc: 71.84| ppl: 3.64| 1401.0 tgt tok/s| 29.74 s elapsed
+Step 11, Epoch 0, 45/111| acc: 72.10| ppl: 3.61| 1406.2 tgt tok/s| 30.33 s elapsed
+Step 11, Epoch 0, 46/111| acc: 72.16| ppl: 3.60| 1403.8 tgt tok/s| 30.93 s elapsed
+Step 11, Epoch 0, 47/111| acc: 72.19| ppl: 3.60| 1393.2 tgt tok/s| 31.74 s elapsed
+Step 12, Epoch 0, 48/111| acc: 72.12| ppl: 3.60| 1381.6 tgt tok/s| 32.67 s elapsed
+Step 12, Epoch 0, 49/111| acc: 72.22| ppl: 3.58| 1371.6 tgt tok/s| 33.61 s elapsed
+Step 12, Epoch 0, 50/111| acc: 72.28| ppl: 3.57| 1369.0 tgt tok/s| 34.38 s elapsed

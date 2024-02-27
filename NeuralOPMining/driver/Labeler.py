@@ -28,7 +28,7 @@ class SRLLabeler(object):
             answers = answers.cuda(self.device)
             outmasks = outmasks.cuda(self.device)
         loss = self.model.compute_loss(self.label_scores, answers, outmasks)
-        stats = self.stats(loss.data[0], self.label_scores.data, answers.data)
+        stats = self.stats(loss.data.item(), self.label_scores.data, answers.data)
         return loss, stats
 
     def stats(self, loss, scores, target):
